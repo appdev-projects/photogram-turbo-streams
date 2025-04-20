@@ -1,0 +1,5 @@
+
+
+<%= turbo_stream.remove ".#{dom_id(@follow_request.recipient)}" do %>
+  <%= render({ :partial => "form", :formats => [:html], :locals => { :follow_request => @follow_request.recipient.follow_requests.build } }) %>
+<% end %>
